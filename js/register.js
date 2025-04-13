@@ -294,7 +294,7 @@ if (authForm) {
 
             if (success) {
                 user.saveUser();
-                window.location.href = "http://localhost:63342/grroup7/plans.html";
+                window.location.href = "https://maarufmeek.github.io/Gymnergy/plans.html";
             } else {
                 // showToast('Incorrect password', 'error')
                 alert("Incorrect password!");
@@ -314,11 +314,11 @@ if (logoutBtn) {
         if (user) {
             user.logout();
             console.log('Logout successful');
-            window.location.href = 'http://localhost:63342/grroup7/register.html';
+            window.location.href = 'https://maarufmeek.github.io/Gymnergy//register.html';
         } else {
             alert('no cur_user')
             console.warn('No cur_user is currently logged in');
-            window.location.href = 'http://localhost:63342/grroup7/register.html';
+            window.location.href = 'https://maarufmeek.github.io/Gymnergy/register.html';
         }
     });
 }
