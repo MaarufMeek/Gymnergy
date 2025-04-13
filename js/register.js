@@ -58,7 +58,6 @@ class User {
     registerUser() {
         this.hasRegistered = true;
         this.saveUser();
-        alert("Registration successful!");
     }
 
     // Logs in the cur_user by validating their credentials
@@ -267,7 +266,7 @@ if (authForm) {
             }
 
             if (localStorage.getItem(email)) {
-                alert("User already registered. Please log in.");
+                showToast('User registered already. Please log in')
                 isRegisterMode = false;
                 toggleBtn.click();
                 return;
@@ -278,14 +277,14 @@ if (authForm) {
             authForm.reset();
             isRegisterMode = false;
 
-            // showToast(`Hey ${name}, welcome to Gymnergy`, 'success')
+            showToast(`Hey ${name}, welcome to Gymnergy`, 'success')
             toggleBtn.click();
 
         } else {
             const storedData = localStorage.getItem(email);
             if (!storedData) {
                 alert('no cur_user')
-                // showToast('User not found. Please register', 'info')
+                showToast('User not found. Please register', 'info')
                 return;
             }
 
